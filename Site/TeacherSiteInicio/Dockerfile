@@ -13,8 +13,8 @@ COPY ["TeacherSiteInicio.csproj", "TeacherSiteInicio/"]
 RUN dotnet restore "./TeacherSiteInicio/./TeacherSiteInicio.csproj"
 COPY . .
 WORKDIR "/src/TeacherSiteInicio"
-RUN dotnet build "./TeacherSiteInicio.csproj" -c $BUILD_CONFIGURATION -o /app/build
-
+#RUN dotnet build "./TeacherSiteInicio.csproj" -c $BUILD_CONFIGURATION -o /app/build
+#
 FROM build AS publish
 ARG BUILD_CONFIGURATION=Release
 RUN dotnet publish "./TeacherSiteInicio.csproj" -c $BUILD_CONFIGURATION -o /app/publish /p:UseAppHost=false
