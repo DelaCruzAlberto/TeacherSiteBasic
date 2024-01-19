@@ -1,0 +1,84 @@
+/* CSS para un footer pegajoso */
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Reinicio básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; /* Asegura que el logo y el nav estén en lados opuestos */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 0 15px; /* Añade algo de padding a los lados de la cabecera */
+}
+
+#logo {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+nav ul {
+    list-style: none; /* Remueve los estilos de lista por defecto */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Alinea los elementos de la lista horizontalmente */
+}
+
+nav ul li {
+    padding: 0 10px; /* Añade espaciado entre los elementos de la lista */
+}
+
+nav ul li form {
+    margin: 0; /* Asegura que no haya margen adicional en el formulario */
+}
+
+#banner {
+    background-color: #f0f0f0;
+    padding: 50px;
+    text-align: center;
+}
+
+#content {
+    min-height: 100%;
+    /* Asumiendo que tienes un header de 60px de altura y un footer de 60px de altura */
+    padding: 60px 0 60px; /* Altura del footer */
+    box-sizing: border-box; /* Incluye padding en el cálculo de la altura */
+}
+/* Asegúrate de que el contenido principal empuje el footer hacia abajo */
+.main-content {
+    padding-bottom: 60px; /* Debe ser igual o mayor a la altura del footer */
+}
+
+footer {
+    height: 60px; /* Altura del footer */
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px; /* Ajusta según sea necesario */
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+footer hr {
+    margin-bottom: 20px;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: #666;
+}
+
+
